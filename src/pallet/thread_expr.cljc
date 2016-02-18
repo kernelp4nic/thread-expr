@@ -1,6 +1,7 @@
 (ns pallet.thread-expr
   "Macros that can be used in an expression thread."
-  (:require [clojure.tools.macro :as macro]))
+  #?(:clj (:require [clojure.tools.macro :as macro])))
+
 
 (letfn [(for- [threader arg seq-exprs body]
           `(reduce #(%2 %1)

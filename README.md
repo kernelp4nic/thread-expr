@@ -58,6 +58,26 @@ Expands to:
 ;=> 7
 ```
 
+## ClojureScript
+
+In order to use the library with [ClojureScript](https://github.com/clojure/clojurescript) we use [readers conditionals](http://clojure.org/guides/reader_conditionals).
+
+You need to use `:require-macros` in your namespace. For example:
+```clojure
+;; example_ns.cljs
+(ns example-ns
+  (:require-macros [pallet.thread-expr :as th]))
+```
+
+Also, you can use both with readers conditionals:
+
+```clojure
+;; example_ns.cljc
+(ns example-ns
+  #?(:cljs (:require-macros [pallet.thread-expr :as th]))
+  #?(:clj (:require [pallet.thread-expr :as th])))
+```
+
 ## Installation
 
 thread-expr is distributed as a jar, and is available in the
