@@ -1,4 +1,4 @@
-(defproject com.palletops/thread-expr "1.4.0"
+(defproject org.clojars.intception/thread-expr "1.4.0"
   :description "Thread-expr provides macros for use within a clojure threaded
 argument expressions (-> and ->>)."
   :url "http://palletops.com"
